@@ -1,0 +1,13 @@
+# Ignore folders
+node_modules/
+build/
+dist/
+logs/
+
+# Ignore specific files
+*.log
+.env
+.DS_Store
+
+# Ignore all .tmp files
+*.tmp
