@@ -1,0 +1,104 @@
+#  AI-Powered Trust & Safety Platform for Amazon Marketplace
+
+A privacy-first platform to detect counterfeits, verify authenticity, block fake reviews, and build digital trust across Amazon's marketplace using AI, blockchain, and edge computing.
+
+Built for Amazon HackOn Season 5  
+Team: Hackit (Mohmmad Ayaan, Shubham K. Dwivedi)
+
+---
+
+##  Problem Statement
+
+Amazon faces rising threats from:
+- Fraudulent sellers & fake reviews
+- Counterfeit listings
+- Hijacked Buy Boxes
+- Inefficient manual moderation
+
+Traditional rule-based systems are not scalable or adaptive enough to keep up with evolving threats.
+
+---
+
+## Our Solution: Edge-Trust Mesh Platform
+
+We propose a **Digital Twin Network** that uses AI + blockchain to secure each high-risk product (electronics, luxury, etc.) with:
+
+- On-chain product identity
+- Verified supply chain journey
+- Tag tamper-detection via Edge-AI
+- Scan-to-verify for customers
+- Decentralized review validation
+
+### Key Components
+
+| Component | Description |
+|----------|-------------|
+|  Digital Twin | A virtual copy of each product recorded on a permissioned blockchain |
+|  Event Oracle | Logs product events (location, temp, time) from factory to delivery |
+|  Edge-AI Vision | Uses CNN to detect tampering from macro photos of QR/NFC tags |
+|  Scan-to-Verify | Buyers scan tags via Amazon app to verify authenticity |
+|  Review Verifier | TinyBERT + MobileNet AI model runs on-device to filter fake reviews |
+|  zk-Cred for Sellers | Zero-knowledge proof of seller identity and factory origin |
+|  Reputation Engine | Computes a live trust score badge shown next to listings |
+|  Graph Analytics | Detects grey-market or counterfeit clusters using path analysis |
+|  Auto Takedown | Suspicious listings are removed or flagged in real time |
+
+---
+
+##  UI Overview
+
+###  Product Scanner
+
+- Verifies tag authenticity
+- Shows Digital Twin info + supply chain journey
+- Confirms blockchain verification
+
+###  Analytics Dashboard
+![Analytics Dashboard](assets/analytics-dashboard.png)
+
+- Live product scan metrics
+- Edge-AI review analysis with TinyBERT
+- Supply chain graph analysis
+- Fakes blocked and trust score visualizations
+
+---
+
+##  Key Impact Goals
+
+| Metric | Target |
+|--------|--------|
+|  Scan Rate | 70%+ customer engagement via in-app verification |
+|  Fakes Blocked | 90%+ blocked before reaching buyer |
+|  Recall Time | Faulty node detected & isolated in < 4 hours |
+|  Grey-Market Drop | 50% drop in duplicate IDs |
+|  Brand Adoption | 1,000+ vendors onboarded (electronics, luxury, beauty) |
+
+---
+
+##  Tech Stack
+
+| Layer | Tech |
+|-------|------|
+|  Blockchain | Hyperledger Fabric / AWS Managed Blockchain |
+|  Edge-AI | TinyBERT (5MB) + MobileNet (image check) |
+|  Federated Learning | AWS SageMaker + Differential Privacy |
+|  Zero-Knowledge Proof | zk-Cred using AWS Nitro Enclaves |
+|  Frontend | React.js + Tailwind CSS |
+|  Backend | Node.js (Express) |
+|  Database | MongoDB |
+|  Deployment | AWS (local demo shown here via `localhost`) |
+
+---
+
+##  Setup (Local Demo)
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/amazon-trust-safety.git
+cd amazon-trust-safety
+
+# Install dependencies
+npm install
+
+# Start the local dev server
+npm run dev
